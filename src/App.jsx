@@ -7,6 +7,7 @@ import LogIn from "./routes/Login";
 import SignUp from "./routes/SignUp";
 import Cart from "./routes/Cart";
 import Checkout from "./routes/Checkout";
+import Home from "./routes/Home";
 import "./index.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 				<Route path="/sign-up" element={<SignUp />}></Route>
 				<Route path="/cart" element={<Cart />}></Route>
 				<Route path="/checkout" element={<Checkout />}></Route>
+				<Route path="/" element={<Home />}></Route>
 			</Routes>
 		</Router>
 	);

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CheckOut</title>
+
+		<link rel="stylesheet" href="Checkout.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+		/>
+	</head>
+
+	<body>
+		<p id="HomeCart">
+			Account &nbsp;/ &nbsp; My Account &nbsp;/&nbsp; Product
+			&nbsp;/&nbsp; View Cart &nbsp;/&nbsp;<b>CheckOut</b>
+		</p>
+		<br />
+		<br />
+		<div class="main">
+			<div id="left">
+				<h2>Billing Details</h2>
+				<form action="/">
+					<label for="fname">First Name </label><br />
+					<input
+						type="text"
+						name="fname"
+						id="fname"
+						required
+					/><br /><br /><br />
+					<label for="cname">Company Name </label><br />
+					<input
+						type="text"
+						name="cname"
+						id="cname"
+					/><br /><br /><br />
+					<label for="add">Street Address </label><br />
+					<input
+						type="text"
+						name="add"
+						id="add"
+						required
+					/><br /><br /><br />
+					<label for="floor"
+						>Apartement, floor, etc. (optional): </label
+					><br />
+					<input
+						type="text"
+						name="floor"
+						id="floor"
+					/><br /><br /><br />
+					<label for="city">Town/City </label><br />
+					<input type="text" id="city" required /><br /><br /><br />
+					<label for="num">Phone Number </label><br />
+					<input type="text" id="num" required /><br /><br /><br />
+					<label for="mail">E-mail Address </label><br />
+					<input type="email" id="mail" required /><br /><br /><br />
+				</form>
+
+				<input type="checkbox" name="check" id="check" />&nbsp;
+				<label for="check" id="checklabel"
+					>Save this information for faster checkout next time</label
+				>
+			</div>
+			<div id="right">
+				<div class="write">
+					<div class="con0">
+						<span
+							><img
+								src="../images/checkout/LCD.jpeg"
+								alt="LCD" /></span
+						>&nbsp;&nbsp;LCD Monitor
+					</div>
+					<div class="con">$650</div>
+				</div>
+				<div class="write">
+					<div class="con0">
+						<span
+							><img
+								src="../images/checkout/Gamepad.jpeg"
+								alt="Gamepad" /></span
+						>&nbsp;&nbsp;H1 Gamepad
+					</div>
+					<div class="con">$550</div>
+				</div>
+				<div id="con">
+					<p class="left1">Subtotal:</p>
+					<p class="right1">$1750</p>
+				</div>
+				<hr />
+				<div id="con">
+					<p class="left1">Shipping:</p>
+					<p class="right1">Free</p>
+				</div>
+				<hr />
+				<div id="con">
+					<p class="left1">Total:</p>
+					<p class="right1">$1750</p>
+				</div>
+				<br />
+				<div class="bank">
+					<input type="radio" name="bank" id="bank" />&nbsp;
+					<label for="bank" id="banklabel">Bank</label>
+
+					<span
+						><img src="../images/checkout/nag.jpeg" alt="nag"
+					/></span>
+					<span
+						><img
+							src="../images/checkout/master.jpeg"
+							alt="mastercard"
+					/></span>
+					<span
+						><img src="../images/checkout/visa.jpeg" alt="visa"
+					/></span>
+					<span
+						><img src="../images/checkout/bkash.jpeg" alt="bkash"
+					/></span>
+				</div>
+				<br />
+				<br />
+				<input type="radio" name="cod" id="cod" checked />&nbsp;
+				<label for="cod" id="codlabel">Cash On Delivery</label>
+				<br />
+				<br />
+				<div id="LBut">
+					<input
+						type="text"
+						name="text"
+						id="text"
+						placeholder="Coupon Code"
+					/>&nbsp;
+					<button type="submit" id="coup">Apply Coupon</button>
+				</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<button type="submit" id="coup">Place Order</button>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<div class="Footer">
+			<div class="Five">
+				<ul>
+					<li>Exclusive</li>
+					<li>Subscribe</li>
+					<li>Get 10% Off on Your First Order</li>
+					<li>
+						<div class="butt">
+							<input
+								type="text"
+								name="mail1"
+								id="mail1"
+								placeholder="Enter your Email"
+							/>
+							<button id="send">
+								<span class="material-symbols-outlined">
+									send
+								</span>
+							</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Five">
+				<ul>
+					<li>Support</li>
+					<li>Vellore - 632014, Tamil Nadu, India</li>
+					<li>exclusive@gmail.com</li>
+					<li>+91 1234-5678-90</li>
+				</ul>
+			</div>
+			<div class="Five">
+				<ul>
+					<li>Account</li>
+					<li>My Account</li>
+					<li>Login/Register</li>
+					<li>Cart</li>
+					<li>Wishlist</li>
+					<li>Shop</li>
+				</ul>
+			</div>
+			<div class="Five">
+				<ul>
+					<li>Quick Link</li>
+					<li>Privacy Policy</li>
+					<li>Terms of Use</li>
+					<li>FAQ</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+			<br />
+			<br />
+		</div>
+		<h4 id="copy">&copy; Copyright Rimel 2022. All rights reserved</h4>
+	</body>
+</html>
