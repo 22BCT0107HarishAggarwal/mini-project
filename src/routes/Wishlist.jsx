@@ -8,83 +8,89 @@ import Product7 from "../assets/wishlist/product7.png";
 import Product8 from "../assets/wishlist/product8.png";
 import EyeIcon from "../assets/wishlist/eyeIcon.png";
 import CartIcon from "../assets/wishlist/cartIcon.png";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 export default function Wishlist() {
 	return (
-		<main className="my-16">
-			<div className="flex flex-col">
-				<div className="px-10 lg:px-32 my-16">
-					<span className="text-slate-400">Home&nbsp;/</span>
-					<span>&nbsp;Wishlist</span>
+		<>
+			<NavBar />
+			<main className="my-16">
+				<div className="flex flex-col">
+					<div className="px-10 lg:px-32 my-16">
+						<span className="text-slate-400">Home&nbsp;/</span>
+						<span>&nbsp;Wishlist</span>
+					</div>
+					<section className="px-10 lg:px-32">
+						<div className="flex justify-between items-center">
+							<div className="">Wishlist (4)</div>
+							<div className="border-2 border-gray-400 px-3 lg:px-10 py-2 rounded-md">
+								Move All to Bag
+							</div>
+						</div>
+						<div className="flex flex-col md:flex-row flex-wrap justify-between items-center">
+							<ProductCard
+								imgSrc={Product1}
+								name="Gucci duffle bag"
+								discountPrice="$960"
+								originalPrice="$1160"
+							/>
+							<ProductCard
+								imgSrc={Product2}
+								name="RGB liquid CPU Cooler"
+								discountPrice="$1960"
+							/>
+							<ProductCard
+								imgSrc={Product3}
+								name="GP11 Shooter USB Gamepad"
+								discountPrice="$550"
+							/>
+							<ProductCard
+								imgSrc={Product4}
+								name="Quilted Satin Jacket"
+								discountPrice="$750"
+							/>
+						</div>
+					</section>
 				</div>
-				<section className="px-10 lg:px-32">
+				<section className="my-16 px-10 lg:px-32">
 					<div className="flex justify-between items-center">
-						<div className="">Wishlist (4)</div>
+						<div className="flex gap-5 justify-center items-center">
+							<div className="w-5 h-10 bg-red-500 rounded-md"></div>
+							<div>Just For You</div>
+						</div>
 						<div className="border-2 border-gray-400 px-3 lg:px-10 py-2 rounded-md">
-							Move All to Bag
+							See All
 						</div>
 					</div>
 					<div className="flex flex-col md:flex-row flex-wrap justify-between items-center">
 						<ProductCard
-							imgSrc={Product1}
-							name="Gucci duffle bag"
+							imgSrc={Product5}
+							name="ASUS FHD Gaming Laptop"
 							discountPrice="$960"
 							originalPrice="$1160"
 						/>
 						<ProductCard
-							imgSrc={Product2}
-							name="RGB liquid CPU Cooler"
-							discountPrice="$1960"
+							imgSrc={Product6}
+							name="IPS LCD Gaming Monitor"
+							discountPrice="$1160"
 						/>
 						<ProductCard
-							imgSrc={Product3}
-							name="GP11 Shooter USB Gamepad"
-							discountPrice="$550"
+							imgSrc={Product7}
+							name="HAVIT HV-G92 Gamepad"
+							discountPrice="$560"
+							originalPrice="$1160"
 						/>
 						<ProductCard
-							imgSrc={Product4}
-							name="Quilted Satin Jacket"
-							discountPrice="$750"
+							imgSrc={Product8}
+							name="AK-900 Wired Keyboard"
+							discountPrice="$200"
 						/>
 					</div>
 				</section>
-			</div>
-			<section className="my-16 px-10 lg:px-32">
-				<div className="flex justify-between items-center">
-					<div className="flex gap-5 justify-center items-center">
-						<div className="w-5 h-10 bg-red-500 rounded-md"></div>
-						<div>Just For You</div>
-					</div>
-					<div className="border-2 border-gray-400 px-3 lg:px-10 py-2 rounded-md">
-						See All
-					</div>
-				</div>
-				<div className="flex flex-col md:flex-row flex-wrap justify-between items-center">
-					<ProductCard
-						imgSrc={Product5}
-						name="ASUS FHD Gaming Laptop"
-						discountPrice="$960"
-						originalPrice="$1160"
-					/>
-					<ProductCard
-						imgSrc={Product6}
-						name="IPS LCD Gaming Monitor"
-						discountPrice="$1160"
-					/>
-					<ProductCard
-						imgSrc={Product7}
-						name="HAVIT HV-G92 Gamepad"
-						discountPrice="$560"
-						originalPrice="$1160"
-					/>
-					<ProductCard
-						imgSrc={Product8}
-						name="AK-900 Wired Keyboard"
-						discountPrice="$200"
-					/>
-				</div>
-			</section>
-		</main>
+			</main>
+			<Footer />
+		</>
 	);
 
 	function ProductCard({ imgSrc, name, discountPrice, originalPrice = "" }) {
