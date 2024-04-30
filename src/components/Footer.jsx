@@ -54,10 +54,10 @@ export default function Footer() {
 					</li>
 					<li>
 						<Link
-							to="/cart"
+							to="/checkout"
 							className="hover:text-gray-400 transition-colors duration-300 ease-in-out"
 						>
-							Cart
+							Checkout
 						</Link>
 					</li>
 					<li>
