@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+
 function Checkout() {
-	window.location.href = "/checkout/Checkout.html";
+	useEffect(() => {
+		window.location.href = "/checkout/Checkout.html";
+	}, []);
 
 	return null;
 }

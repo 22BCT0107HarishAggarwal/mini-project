@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+
 function Cart() {
-	window.location.href = "/cart/Cart.html";
+	useEffect(() => {
+		window.location.href = "/cart/Cart.html";
+	}, []);
 
 	return null;
 }

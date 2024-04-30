@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+
 export default function Home() {
-	window.location.href = "/home/Home.html";
+	useEffect(() => {
+		window.location.href = "/home/Home.html";
+	}, []);
 
 	return null;
 }

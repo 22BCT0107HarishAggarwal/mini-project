@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+
 function LogIn() {
-	window.location.href = "/login/LogIn.html";
+	useEffect(() => {
+		window.location.href = "/login/LogIn.html";
+	}, []);
 
 	return null;
 }
