@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsOpen(!isOpen);
+	};
+
 	return (
 		<nav className="bg-white border-gray-200 border-b-2">
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -15,10 +22,11 @@ export default function NavBar() {
 				<div className="flex md:order-2">
 					<button
 						type="button"
-						data-collapse-toggle="navbar-search"
-						aria-controls="navbar-search"
+						data-collapse-toggle="navbar-search-icon"
+						aria-controls="navbar-search-icon"
 						aria-expanded="false"
 						className="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 me-1"
+						onClick={toggleMenu}
 					>
 						<svg
 							className="w-5 h-5"
@@ -52,7 +60,7 @@ export default function NavBar() {
 						</div>
 						<input
 							type="text"
-							id="search-navbar"
+							id="search-navbar-desktop"
 							className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
 							placeholder="Search..."
 						/>
@@ -63,6 +71,7 @@ export default function NavBar() {
 						className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
 						aria-controls="navbar-search"
 						aria-expanded="false"
+						onClick={toggleMenu}
 					>
 						<span className="sr-only">Open main menu</span>
 						<svg
@@ -80,7 +89,9 @@ export default function NavBar() {
 					</button>
 				</div>
 				<div
-					className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+					className={`${
+						isOpen ? "block" : "hidden"
+					} items-center justify-between w-full md:flex md:w-auto md:order-1`}
 					id="navbar-search"
 				>
 					<div className="relative mt-3 md:hidden">
@@ -100,7 +111,7 @@ export default function NavBar() {
 						</div>
 						<input
 							type="text"
-							id="search-navbar"
+							id="search-navbar-mobile"
 							className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
 							placeholder="Search..."
 						/>
@@ -110,6 +121,7 @@ export default function NavBar() {
 							<Link
 								to="/"
 								className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+								onClick={toggleMenu}
 							>
 								Home
 							</Link>
@@ -118,6 +130,7 @@ export default function NavBar() {
 							<Link
 								to="/account"
 								className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+								onClick={toggleMenu}
 							>
 								Account
 							</Link>
@@ -126,6 +139,7 @@ export default function NavBar() {
 							<Link
 								to="/about"
 								className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500"
+								onClick={toggleMenu}
 							>
 								About
 							</Link>
@@ -134,6 +148,7 @@ export default function NavBar() {
 							<Link
 								to="/cart"
 								className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+								onClick={toggleMenu}
 							>
 								Cart
 							</Link>
