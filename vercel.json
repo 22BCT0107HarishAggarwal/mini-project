@@ -25,6 +25,10 @@
 			"dest": "/$1.svg"
 		},
 		{
+			"src": "/(.*).jpeg",
+			"dest": "/$1.jpeg"
+		},
+		{
 			"src": "/(.*)",
 			"dest": "/index.html"
 		}
